@@ -49,3 +49,23 @@ table {
 
 /* CSS reset */
 
+/* VARIABLES */
+:root{
+	--red: #E0241F;
+	--blue: #1FDBE0;
+	--purple: #851FE0;
+	--green: #7AE01F;
+}
+
+/* VARIABLES */
+
+main{
+	min-height: 100vh;
+	min-width: 100%;
+	background-color: antiquewhite;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.2fr 1fr 1fr;
+
+}
+
