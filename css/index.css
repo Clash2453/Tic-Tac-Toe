@@ -68,22 +68,24 @@ table {
 }
 
 /* VARIABLES */
-
+/* body{
+	overflow: hidden;
+} */
 main{
 	min-height: 95vh;
-	min-width: 100%;
+	width: 100%;
 	background-color: antiquewhite;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	padding-top: 0px;
+	grid-template-columns: 1.5fr 0.3fr 0.9fr;
 	grid-template-rows: 0.2fr 1fr 1fr;
 	grid-template-areas: 
 	'heading heading heading'
-	'board board scores'
-	'board board scores';
-
+	'board gap scores '
+	'board gap scores ';
 }
 h1{
-	color: #6D6D6C;
+	color: #04010C;
 	font-size: 2rem;
 	font-family: 'reef', sans-serif;
 	font-weight: 900;
@@ -97,6 +99,7 @@ h2{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	background-color: #6133F0;
 	grid-area: heading;
 }
 #prompt{
@@ -108,10 +111,26 @@ h2{
 }
 
 #game-board{
+	background-color: #3B3B3A;
 	display: grid;
+	border-radius: 5%;
+	margin: 16px;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-area: board;
+	gap: 5px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 5px;
+}
+
+#gap{
+	grid-area: gap;
+	
+}
+
+.area{
+	background-color: white;
+	border-radius: 5px;
 }
 
 #score-board{
@@ -120,4 +139,9 @@ h2{
 	justify-content: center;
 	align-items: center;
 	grid-area: scores;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	margin: 16px;
+	border-radius: 5px;
+	background-color: white;
+
 }
