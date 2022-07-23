@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'reef';
+    src: url('reef-webfont.woff2') format('woff2'),
+         url('reef-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -68,4 +78,31 @@ main{
 	grid-template-rows: 0.2fr 1fr 1fr;
 
 }
+h1{
+	color: #6D6D6C;
+	font-size: 2rem;
+	font-family: 'reef', sans-serif;
+	font-weight: 900;
+	letter-spacing: 3px;
+}
+h2{
+	font-size: 1rem;
+	color: black;
+}
+#prompt{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
+#game-board{
+	display: flex;
+}
+
+#score-baord{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
