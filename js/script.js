@@ -1,7 +1,7 @@
 const playerFactory = (playerName, indicator) => {
 
     const makeMove = () =>{
-        return Math.floor(Math.random(1, 10));
+        return 
     }
 
     return {playerName, indicator, makeMove};
@@ -12,9 +12,9 @@ const gameBoard = (() =>{
     const player1 = playerFactory('clash', 'x');
     const ai = playerFactory('AI', 'o');
     
-    const board = [ ['.','.','.'],
-                    ['.','.','.'],
-                    ['.','.','.']];
+    const board = [ [1,2,3],
+                    [4,5,6],
+                    [7,8,9]];
 
     const boardState = () =>{
         console.log(board);
@@ -51,7 +51,9 @@ const gameBoard = (() =>{
     }
 
     return {
-        boardState
+        boardState,
+        makeMove,
+        gameState
     }
     
 })();
@@ -60,9 +62,13 @@ const displayController = (() =>{
     
     const board = document.getElementById('game-board');
     const areas = [...board.childNodes];
-    const addMarker = (index) =>{
-        gameBoard.makeMove()
-    }
     areas.forEach(area => area.addEventListener('click', addMarker(area.nodeValue)));
+    const addMarker = (index) =>{
+        gameBoard.makeMove(index)
+    }
+
+    return{
+        addMarker
+    }
 
 })();
