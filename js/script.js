@@ -6,3 +6,27 @@ const playerFactory = (playerName, indicator) => {
 
     return {playerName, indicator, makeMove};
 }
+
+const gameBoard = (() =>{
+
+    const player1 = playerFactory('clash', 'x');
+    const ai = playerFactory('AI', 'o');
+    
+    const board = [ ['.','.','.'],
+                    ['.','.','.'],
+                    ['.','.','.']];
+
+    const boardState = () =>{
+        console.log(board);
+    }
+
+    const makeMove = () =>{
+        
+    }
+
+    return {
+        boardState
+    }
+    
+})();
+
