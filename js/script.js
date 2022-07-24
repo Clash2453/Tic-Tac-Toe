@@ -30,3 +30,13 @@ const gameBoard = (() =>{
     
 })();
 
+const displayController = (() =>{
+    
+    const board = document.getElementById('game-board');
+    const areas = [...board.childNodes];
+    const addMarker = (index) =>{
+        gameBoard.makeMove()
+    }
+    areas.forEach(area => area.addEventListener('click', addMarker(area.nodeValue)));
+
+})();
