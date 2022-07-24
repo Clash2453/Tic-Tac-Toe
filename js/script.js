@@ -22,6 +22,8 @@ const gameBoard = (() =>{
 
     const makeMove = () =>{
         
+    const gameState = () =>{
+        board.forEach(row => row.every(el => winCon));
     }
 
     return {
