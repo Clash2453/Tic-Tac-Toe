@@ -20,8 +20,32 @@ const gameBoard = (() =>{
         console.log(board);
     }
 
-    const makeMove = () =>{
-        
+    const makeMove = (index) =>{
+        board.forEach(row=>{
+            if(row.includes(index))
+                row[row.indexOf(index)] = player1.indicator;
+
+            let marker = false;
+
+            while(marker === false){
+
+                if(!isNaN(row[Math.floor(Math.random(1, 10))])){
+                        marker = true;
+                        row[Math.floor(Math.random(1, 10))];
+                    }
+            }
+        })
+    }
+
+    const winCon = (el) => {
+        if(el === player1.indicator){
+            return `${player1.playerName} wins`;
+        }
+        if(el === ai.indicator){
+            return `${player1.playerName} wins`;
+        }
+    }
+
     const gameState = () =>{
         board.forEach(row => row.every(el => winCon));
     }
