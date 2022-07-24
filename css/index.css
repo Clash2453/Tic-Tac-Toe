@@ -91,6 +91,14 @@ h1{
 	font-weight: 900;
 	letter-spacing: 3px;
 }
+
+.main-heading{
+	color: white;
+	border-bottom: 3px solid white;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
 h2{
 	font-size: 1rem;
 	color: black;
@@ -101,6 +109,7 @@ h2{
 	align-items: center;
 	background-color: #6133F0;
 	grid-area: heading;
+	padding: 16px;
 }
 #prompt{
 	display: flex;
@@ -129,8 +138,10 @@ h2{
 }
 
 .area{
+	font-family: 'reef', sans-serif;
 	background-color: white;
 	border-radius: 5px;
+	font-size: 15rem;
 }
 
 #score-board{
