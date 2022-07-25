@@ -33,8 +33,10 @@ const gameBoard = (() =>{
                         marker = true;
                         row[Math.floor(Math.random(1, 10))];
                     }
-            }
-        })
+                }
+        });
+        boardState();
+        console.log('here I am');
     }
 
     const winCon = (el) => {
@@ -60,15 +62,14 @@ const gameBoard = (() =>{
 
 const displayController = (() =>{
     
-    const board = document.getElementById('game-board');
-    const areas = [...board.childNodes];
-    areas.forEach(area => area.addEventListener('click', addMarker(area.nodeValue)));
-    const addMarker = (index) =>{
-        gameBoard.makeMove(index)
-    }
-
+    const areas = [...document.getElementsByClassName('area')];
     return{
-        addMarker
+        areas
     }
 
 })();
+
+displayController.areas.forEach(area => area.addEventListener('click', () => {
+    gameBoard.makeMove(area.value);
+    
+}));
