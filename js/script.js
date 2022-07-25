@@ -11,7 +11,7 @@ const gameBoard = (() =>{
 
     const player1 = playerFactory('clash', 'x');
     const ai = playerFactory('AI', 'o');
-    
+
     const board = [ [1,2,3],
                     [4,5,6],
                     [7,8,9]];
@@ -29,12 +29,16 @@ const gameBoard = (() =>{
 
             while(marker === false){
 
-                if(!isNaN(row[Math.floor(Math.random(1, 10))])){
+                const aiMove = Math.floor(Math.random(1, 10));
+
+                if(!isNaN(row[aiMove]) && row[aiMove] !== player1.indicator){
                         marker = true;
-                        row[Math.floor(Math.random(1, 10))];
+                        row[Math.floor(Math.random(1, 10))] = 'o';
                     }
                 }
         });
+
+
         boardState();
         console.log('here I am');
     }
@@ -55,7 +59,7 @@ const gameBoard = (() =>{
     return {
         boardState,
         makeMove,
-        gameState
+        gameState,
     }
     
 })();
@@ -63,13 +67,11 @@ const gameBoard = (() =>{
 const displayController = (() =>{
     
     const areas = [...document.getElementsByClassName('area')];
-    return{
-        areas
-    }
+
+    areas.forEach(area => area.addEventListener('click', function () {
+        gameBoard.makeMove(Number(area.dataset.number));
+
+    })
+    );
 
 })();
-
-displayController.areas.forEach(area => area.addEventListener('click', () => {
-    gameBoard.makeMove(area.value);
-    
-}));
