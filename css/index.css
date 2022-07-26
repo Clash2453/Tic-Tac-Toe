@@ -141,6 +141,9 @@ h2{
 	background-color: white;
 	border-radius: 5px;
 	font-size: 15rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #score-board{
@@ -153,5 +156,9 @@ h2{
 	margin: 16px;
 	border-radius: 5px;
 	background-color: white;
+}
 
+.marker{
+	width: 150px;
+	height: 150px;
 }
