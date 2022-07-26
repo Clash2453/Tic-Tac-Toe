@@ -68,6 +68,18 @@ const displayController = (() =>{
     
     const areas = [...document.getElementsByClassName('area')];
 
+    const updateMove = (arg) => {
+        const image = document.createElement('img');
+
+        if(arg === 'o')
+            image.src('../images/circle.png');
+
+        image.src('../images/X.png');
+        
+        image.classList.add('marker');
+
+    }
+
     areas.forEach(area => area.addEventListener('click', function () {
         gameBoard.makeMove(Number(area.dataset.number));
 
