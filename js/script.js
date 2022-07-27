@@ -20,6 +20,17 @@ const gameBoard = (() =>{
         console.log(board);
     }
 
+    const resetBoard = () =>{
+        let counter = 1;
+        for (let i = 0; i < board.length; i++) {
+            const row = board[i];
+            for (let k = 0; k < row.length; k++) {
+                row[k] = counter;
+                counter++;
+            }
+        }
+    }
+
     const aiMove = () => {
         let done = false;
         while(done===false){
@@ -32,8 +43,12 @@ const gameBoard = (() =>{
             }
         }
 
-            let marker = false;
-
+    }
+    const transposeMatrix = () => {
+        return [[board[0][0],board[1][0],board[2][0]],
+        [board[0][1],board[1][1],board[2][1]],
+        [board[0][2],board[1][2],board[2][2]]];
+    }
     const makeMove = (index) =>{
 
         for (let i = 0; i < board.length; i++) {
@@ -51,16 +66,9 @@ const gameBoard = (() =>{
                     return;
                 }
             }
-        });
-
             
-        boardState();
-        console.log('here I am');
         }
 
-    const winCon = (el) => {
-        if(el === player1.indicator){
-            return `${player1.playerName} wins`;
     }
     const winCon = (arr) => {
 
@@ -80,7 +88,6 @@ const gameBoard = (() =>{
     return {
         boardState,
         makeMove,
-        gameState,
     }
     
 })();
@@ -100,7 +107,7 @@ const displayController = (() =>{
         image.classList.add('marker');
 
     }
-
+    
     areas.forEach(area => area.addEventListener('click', function () {
         gameBoard.makeMove(Number(area.dataset.number));
 
