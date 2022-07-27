@@ -20,10 +20,17 @@ const gameBoard = (() =>{
         console.log(board);
     }
 
-    const makeMove = (index) =>{
-        board.forEach(row=>{
-            if(row.includes(index))
-                row[row.indexOf(index)] = player1.indicator;
+    const aiMove = () => {
+        let done = false;
+        while(done===false){
+            let x = Math.floor(Math.random()*3);
+            let y = Math.floor(Math.random()*3);
+            console.log('ai thinking')
+            if(!isNaN(board[x][y])){
+                done = true;
+                board[x][y] = ai.indicator;
+            }
+        }
 
             let marker = false;
 
