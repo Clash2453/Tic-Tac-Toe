@@ -35,6 +35,7 @@ const gameBoard = (() =>{
             let marker = false;
 
     const makeMove = (index) =>{
+
         for (let i = 0; i < board.length; i++) {
             const row = board[i];
             for (let k = 0; k < row.length; k++) {
@@ -42,6 +43,12 @@ const gameBoard = (() =>{
                 if(element === index){
                     board[i][k] = player1.indicator;
                     aiMove();
+                    boardState();
+                    winCon([[board[0][0], board[1][1], board[2][2]], [board[0][2], board[1][1], board[2][0]]]);
+                    winCon(transposeMatrix(board));
+                    winCon(board);
+                    console.log('here I am');
+                    return;
                 }
             }
         });
