@@ -46,24 +46,30 @@ const gameBoard = (() =>{
             }
         });
 
-
+            
         boardState();
         console.log('here I am');
-    }
+        }
 
     const winCon = (el) => {
         if(el === player1.indicator){
             return `${player1.playerName} wins`;
-        }
-        if(el === ai.indicator){
-            return `${player1.playerName} wins`;
-        }
     }
+    const winCon = (arr) => {
 
-    const gameState = () =>{
-        board.forEach(row => row.every(el => winCon));
+        arr.forEach(row => {
+            if(row.every(value => value === player1.indicator)){
+                console.log('Player won');
+                resetBoard();
+            }
+
+            if(row.every(value => value === ai.indicator)){
+                console.log('AI won');
+                resetBoard();
+            }
+
+        })
     }
-
     return {
         boardState,
         makeMove,
