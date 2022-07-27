@@ -34,15 +34,16 @@ const gameBoard = (() =>{
 
             let marker = false;
 
-            while(marker === false){
-
-                const aiMove = Math.floor(Math.random(1, 10));
-
-                if(!isNaN(row[aiMove]) && row[aiMove] !== player1.indicator){
-                        marker = true;
-                        row[Math.floor(Math.random(1, 10))] = 'o';
-                    }
+    const makeMove = (index) =>{
+        for (let i = 0; i < board.length; i++) {
+            const row = board[i];
+            for (let k = 0; k < row.length; k++) {
+                let element = row[k];
+                if(element === index){
+                    board[i][k] = player1.indicator;
+                    aiMove();
                 }
+            }
         });
 
 
