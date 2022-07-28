@@ -102,19 +102,24 @@ h2{
 	font-size: 1rem;
 	color: black;
 }
-#heading{
+#heading,
+#prompt,
+.area,
+#score-board{
 	display: flex;
-	justify-content: flex-start;
 	align-items: center;
-	background-color: #6133F0;
+}
+#heading{
+
+	justify-content: flex-start;
+
+	background-color: #290d7c;
 	grid-area: heading;
 	padding: 16px;
 }
 #prompt{
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	display: none;
 }
 
@@ -141,16 +146,12 @@ h2{
 	background-color: white;
 	border-radius: 5px;
 	font-size: 15rem;
-	display: flex;
-	align-items: center;
 	justify-content: center;
 }
 
 #score-board{
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	grid-area: scores;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	margin: 16px;
