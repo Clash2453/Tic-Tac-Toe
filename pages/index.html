@@ -14,12 +14,17 @@
               <path fill="#5000ca" fill-opacity="1" d="M0,128L26.7,112C53.3,96,107,64,160,80C213.3,96,267,160,320,197.3C373.3,235,427,245,480,261.3C533.3,277,587,299,640,282.7C693.3,267,747,213,800,192C853.3,171,907,181,960,202.7C1013.3,224,1067,256,1120,250.7C1173.3,245,1227,203,1280,186.7C1333.3,171,1387,181,1413,186.7L1440,192L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z" data-inline-fill="" style="--darkreader-inline-fill:#40029c;"></path>
             </svg>
 
+            <h1 id="create-heading">Create your character!</h1>
+            <div id="char-input">
+                <label for="name">Name: </label>
+                <input type="text" name="username" id="player-name">
+                <div id="indicators">
+                    <img class="marker-selector" src="../images/circle.png" alt="Circle marker">
+                    <img class="marker-selector" src="../images/X.png" alt="X marker">
+                </div>
+                <button id="create-button">Create</button>
             </div>
-        </div>
-        <div id="character-create">
-            <h1>Create your character!</h1>
-            <label for="name">Name: </label>
-            <input type="text" name="username" id="player-name">
+
         </div>
         <div id="main-section" class="hidden">
             <div id="heading">
@@ -52,7 +57,11 @@
                 </div>
             </div>
         </div>
-        
+        <div class="container">
+            <div id="game-end">
+
+            </div>
+        </div>
     </main>
     <script src="../js/script.js"></script>
 </body>
