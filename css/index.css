@@ -117,6 +117,19 @@ h2{
 	grid-area: heading;
 	padding: 16px;
 }
+
+#character-create{
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(25, 26, 27);
+}
+
+#create-heading{
+	font-size: 6rem;
+}
+
 #prompt{
 	flex-direction: column;
 	justify-content: center;
