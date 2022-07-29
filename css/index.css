@@ -114,6 +114,13 @@ button:hover {
 	justify-content: center;
 	gap: 1rem;
 }
+.marker-selector{
+	width: 7rem;
+	height: 7rem;
+	border-radius: 5%;
+	background-color: rgb(47, 48, 54);
+}
+
 
 #main-section{
 	min-height: 95vh;
