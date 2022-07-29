@@ -38,8 +38,10 @@ const gameBoard = (() =>{
             let y = Math.floor(Math.random()*3);
             console.log('ai thinking')
             if(!isNaN(board[x][y])){
+                let areaNumber = board[x][y];
                 done = true;
                 board[x][y] = ai.indicator;
+                return areaNumber;
             }
         }
 
