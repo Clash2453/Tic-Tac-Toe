@@ -134,6 +134,11 @@ const displayController = (() =>{
 
     })
     );
+    }
+
+    const removeEvent = (area) =>{
+        area.removeEventListener('click', move);
+    } 
 
     return {
         updateMove
