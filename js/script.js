@@ -138,8 +138,12 @@ const displayController = (() =>{
         area.removeEventListener('click', move);
     } 
 
+    addEvent();
     return {
-        updateMove
+        updateMove,
+        addEvent,
+        resetBoard,
+        addEvent
     }
 
 })();
