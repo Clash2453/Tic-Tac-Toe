@@ -9,35 +9,48 @@
 </head>
 <body>
     <main>
-        <div id="heading">
-            <h1 class="main-heading">Tic Tac Toe</h1>
-        </div>
-        <div id="prompt">
-            <h2>Create player</h2>
-            <label for="">
-                Enter your name:
-                <input name="name" type="text">
-            </label>
-            <button class="marker-choice"></button>
-            <button class="marker-choice"></button>
-        </div>
-        <div id="gap"></div>
-        <div id="game-board">
-            <div class="area" id="area-1" data-number="1"></div>
-            <div class="area" id="area-2" data-number="2"></div>
-            <div class="area" id="area-3" data-number="3"></div>
-            <div class="area" id="area-4" data-number="4"></div>
-            <div class="area" id="area-5" data-number="5"></div>
-            <div class="area" id="area-6" data-number="6"></div>
-            <div class="area" id="area-7" data-number="7"></div>
-            <div class="area" id="area-8" data-number="8"></div>
-            <div class="area" id="area-9" data-number="9"></div>
-        </div>
-        <div id="score-board">
-            <div>
-                <h1>Results</h1>
+        <div class="container">
+            <div id="game-end">
+
             </div>
         </div>
+        <div id="character-create">
+            <h1>Create your character!</h1>
+            <label for="name">Name: </label>
+            <input type="text" name="username" id="player-name">
+        </div>
+        <div id="main-section" class="hidden">
+            <div id="heading">
+                <h1 class="main-heading">Tic Tac Toe</h1>
+            </div>
+            <div id="prompt">
+                <h2>Create player</h2>
+                <label for="">
+                    Enter your name:
+                    <input name="name" type="text">
+                </label>
+                <button class="marker-choice"></button>
+                <button class="marker-choice"></button>
+            </div>
+            <div id="gap"></div>
+            <div id="game-board">
+                <div class="area" id="area-1" data-number="1"></div>
+                <div class="area" id="area-2" data-number="2"></div>
+                <div class="area" id="area-3" data-number="3"></div>
+                <div class="area" id="area-4" data-number="4"></div>
+                <div class="area" id="area-5" data-number="5"></div>
+                <div class="area" id="area-6" data-number="6"></div>
+                <div class="area" id="area-7" data-number="7"></div>
+                <div class="area" id="area-8" data-number="8"></div>
+                <div class="area" id="area-9" data-number="9"></div>
+            </div>
+            <div id="score-board">
+                <div>
+                    <h1>Results</h1>
+                </div>
+            </div>
+        </div>
+        
     </main>
     <script src="../js/script.js"></script>
 </body>
