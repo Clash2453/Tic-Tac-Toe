@@ -121,6 +121,12 @@ button:hover {
 	background-color: rgb(47, 48, 54);
 }
 
+#indicators{
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	gap: 1rem;
+}
 
 #main-section{
 	min-height: 95vh;
