@@ -107,6 +107,14 @@ button:hover {
   }
 }
 
+#char-input{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
 #main-section{
 	min-height: 95vh;
 	width: 100%;
