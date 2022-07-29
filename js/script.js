@@ -129,11 +129,9 @@ const displayController = (() =>{
         gameBoard.makeMove(Number(this.dataset.number));
     }
     
-    areas.forEach(area => area.addEventListener('click', function () {
-        gameBoard.makeMove(Number(area.dataset.number));
-
-    })
-    );
+    const addEvent = () => {
+        areas.forEach(area => area.addEventListener('click', move)
+        );    
     }
 
     const removeEvent = (area) =>{
