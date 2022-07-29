@@ -152,6 +152,20 @@ label{
 	'board gap scores '
 	'board gap scores ';
 }
+
+#player-name{
+	height: 2rem;
+	width: 20rem;
+	background-color: rgb(47, 48, 54);
+	box-sizing: border-box;
+	box-shadow: rgba(151, 65, 252, 0.25) 0px 54px 55px, rgba(151, 65, 252, 0.12) 0px -12px 30px, rgba(151, 65, 252, 0.12) 0px 4px 6px, rgba(151, 65, 252, 0.15) 0px 12px 13px, rgba(151, 65, 252, 0.09) 0px 3px 5px;;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	font-family: 'reef', sans-serif;
+	font-size: 2rem;
+}
+
 h1{
 	color: #04010C;
 	font-size: 2rem;
