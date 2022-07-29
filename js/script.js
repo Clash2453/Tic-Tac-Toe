@@ -119,6 +119,15 @@ const displayController = (() =>{
         area.appendChild(image)
 
     }
+    const resetBoard = () => {
+        areas.forEach(area =>{
+            if(area.childNodes.length !== 0)
+                area.removeChild(area.childNodes[0]);
+        })
+    }
+    function move() {
+        gameBoard.makeMove(Number(this.dataset.number));
+    }
     
     areas.forEach(area => area.addEventListener('click', function () {
         gameBoard.makeMove(Number(area.dataset.number));
