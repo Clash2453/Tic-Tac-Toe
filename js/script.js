@@ -104,15 +104,19 @@ const displayController = (() =>{
     
     const areas = [...document.getElementsByClassName('area')];
 
-    const updateMove = (arg) => {
+    const updateMove = (arg, marker) => {
+        const area = document.querySelector(`[data-number="${arg}"]`);
         const image = document.createElement('img');
-
-        if(arg === 'o')
-            image.src('../images/circle.png');
-
-        image.src('../images/X.png');
-        
         image.classList.add('marker');
+
+        if(marker === 'o'){
+            image.src = '../images/circle.png';
+            area.appendChild(image)
+            return;
+        }
+
+        image.src = '../images/X.png';
+        area.appendChild(image)
 
     }
     
@@ -121,5 +125,9 @@ const displayController = (() =>{
 
     })
     );
+
+    return {
+        updateMove
+    }
 
 })();
