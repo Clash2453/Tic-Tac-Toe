@@ -61,9 +61,15 @@ const gameBoard = (() =>{
                     board[i][k] = player1.indicator;
                     aiMove();
                     boardState();
+
+                    displayController.updateMove(index, player1.indicator);
+                    displayController.updateMove(aiMove(), ai.indicator);
+
                     winCon([[board[0][0], board[1][1], board[2][2]], [board[0][2], board[1][1], board[2][0]]]);
+            
                     winCon(transposeMatrix(board));
                     winCon(board);
+
                     console.log('here I am');
                     return;
                 }
