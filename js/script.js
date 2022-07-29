@@ -21,6 +21,7 @@ const gameBoard = (() =>{
     }
 
     const resetBoard = () =>{
+        displayController.resetBoard();
         let counter = 1;
         for (let i = 0; i < board.length; i++) {
             const row = board[i];
