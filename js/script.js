@@ -30,6 +30,7 @@ const gameBoard = (() =>{
                 counter++;
             }
         }
+        displayController.addEvent();
     }
 
     const aiMove = () => {
@@ -60,7 +61,6 @@ const gameBoard = (() =>{
                 let element = row[k];
                 if(element === index){
                     board[i][k] = player1.indicator;
-                    aiMove();
                     boardState();
 
                     displayController.updateMove(index, player1.indicator);
@@ -109,7 +109,7 @@ const displayController = (() =>{
         const area = document.querySelector(`[data-number="${arg}"]`);
         const image = document.createElement('img');
         image.classList.add('marker');
-
+        removeEvent(area)
         if(marker === 'o'){
             image.src = '../images/circle.png';
             area.appendChild(image)
@@ -139,6 +139,15 @@ const displayController = (() =>{
         area.removeEventListener('click', move);
     } 
 
+    const creationMenuToggle = () =>{
+        const create = document.getElementById('create-button');
+        const createMenu = document.getElementById('character-create');
+        create.addEventListener('click', function(){
+            createMenu.classList.toggle('hidden')
+        })
+    }
+        
+    creationMenuToggle();
     addEvent();
     return {
         updateMove,
