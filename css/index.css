@@ -67,12 +67,18 @@ table {
 }
 
 /* VARIABLES */
-/* body{
-	overflow: hidden;
-} */
 main{
 	min-height: 95vh;
 	width: 100%;
+}
+
+#heading,
+#prompt,
+.area,
+#score-board,
+.container{
+	display: flex;
+	align-items: center;
 }
 
 button{
@@ -120,6 +126,7 @@ label{
 	justify-content: center;
 	gap: 1rem;
 }
+
 .marker-selector{
 	width: 7rem;
 	height: 7rem;
@@ -167,7 +174,7 @@ label{
 }
 
 h1{
-	color: #04010C;
+	color: white;
 	font-size: 2rem;
 	font-family: 'reef', sans-serif;
 	font-weight: 900;
@@ -185,13 +192,7 @@ h2{
 	font-size: 1rem;
 	color: black;
 }
-#heading,
-#prompt,
-.area,
-#score-board{
-	display: flex;
-	align-items: center;
-}
+
 #heading{
 
 	justify-content: flex-start;
@@ -203,7 +204,7 @@ h2{
 
 #character-create{
 	flex-direction: column;
-	justify-content: space-between;
+	gap: 2rem;
 	width: 100%;
 	height: 100vh;
 	background-color: rgb(25, 26, 27);
@@ -258,4 +259,16 @@ h2{
 .marker{
 	width: 150px;
 	height: 150px;
+}
+
+#game-end{
+	width: 50vw;
+	height: 35vh;
+	min-width: 25rem;
+	min-height: 10rem;
+}
+
+
+.hidden{
+	display: none;
 }
