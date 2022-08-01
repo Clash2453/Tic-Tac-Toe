@@ -81,6 +81,18 @@ const gameBoard = (() =>{
         }
 
     }
+
+    const checkDraw = () => {
+        let draw = true;
+        board.forEach(row => row.forEach(e => {if(!isNaN(e)){draw = false}}))
+
+        if(draw === true){
+            console.log('It is a draw');
+            resetBoard();
+            return true;
+        }
+    }
+
     const winCon = (arr) => {
 
         arr.forEach(row => {
