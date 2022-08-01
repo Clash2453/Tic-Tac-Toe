@@ -142,8 +142,10 @@ const displayController = (() =>{
     const creationMenuToggle = () =>{
         const create = document.getElementById('create-button');
         const createMenu = document.getElementById('character-create');
+        const main = document.getElementById('main-section');
         create.addEventListener('click', function(){
-            createMenu.classList.toggle('hidden')
+            createMenu.classList.toggle('hidden');
+            main.style.display = 'grid';
         })
     }
         
