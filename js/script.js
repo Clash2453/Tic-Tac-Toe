@@ -1,4 +1,6 @@
 const playerFactory = (playerName, indicator) => {
+    return {playerName, indicator};
+}
 
 const gameBoard = (() =>{
 
@@ -11,11 +13,6 @@ const gameBoard = (() =>{
     const setAi = (indicator ) =>{
         ai = playerFactory('AI', indicator);
     }
-
-const gameBoard = (() =>{
-
-    const player1 = playerFactory('clash', 'x');
-    const ai = playerFactory('AI', 'o');
 
     const board = [ [1,2,3],
                     [4,5,6],
@@ -184,7 +181,6 @@ const displayController = (() =>{
         updateMove,
         addEvent,
         resetBoard,
-        addEvent
     }
 
 })();
