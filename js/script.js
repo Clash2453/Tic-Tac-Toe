@@ -154,13 +154,23 @@ const displayController = (() =>{
         const create = document.getElementById('create-button');
         const createMenu = document.getElementById('character-create');
         const main = document.getElementById('main-section');
+        const player = document.getElementById('player');
+        const nameInput = document.getElementById('player-name');
         create.addEventListener('click', function(){
+            let name = nameInput.value;
             createMenu.classList.toggle('hidden');
+            player.textContent = name;
             main.style.display = 'grid';
+            gameBoard.setPlayer(name,selectedIndicator);
+            if(selectedIndicator === 'o')
+                gameBoard.setAi('x')
+            if(selectedIndicator === 'x')
+                gameBoard.setAi('o');
         })
     }
         
     creationMenuToggle();
+    selectIndicator();
     addEvent();
     return {
         updateMove,
