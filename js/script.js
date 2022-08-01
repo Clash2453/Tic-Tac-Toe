@@ -1,11 +1,16 @@
 const playerFactory = (playerName, indicator) => {
 
-    const makeMove = () =>{
-        return 
+const gameBoard = (() =>{
+
+    let player1, ai;
+
+    const setPlayer = (player, indicator ) =>{
+        player1 = playerFactory(player, indicator);
     }
 
-    return {playerName, indicator, makeMove};
-}
+    const setAi = (indicator ) =>{
+        ai = playerFactory('AI', indicator);
+    }
 
 const gameBoard = (() =>{
 
@@ -97,6 +102,8 @@ const gameBoard = (() =>{
     return {
         boardState,
         makeMove,
+        setPlayer,
+        setAi
     }
     
 })();
@@ -104,6 +111,7 @@ const gameBoard = (() =>{
 const displayController = (() =>{
     
     const areas = [...document.getElementsByClassName('area')];
+    let selectedIndicator;
 
     const updateMove = (arg, marker) => {
         const area = document.querySelector(`[data-number="${arg}"]`);
