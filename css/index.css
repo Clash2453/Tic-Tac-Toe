@@ -154,7 +154,6 @@ label{
 	min-height: 95vh;
 	width: 100%;
 	background-color: antiquewhite;
-	display: grid;
 	padding-top: 0px;
 	grid-template-columns: 1.5fr 0.3fr 0.9fr;
 	grid-template-rows: 0.2fr 1fr 1fr;
