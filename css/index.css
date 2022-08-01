@@ -66,7 +66,7 @@ table {
 	--green: #7AE01F;
 }
 
-/* VARIABLES */
+git /* VARIABLES */
 main{
 	min-height: 95vh;
 	width: 100%;
@@ -132,6 +132,10 @@ label{
 	height: 7rem;
 	border-radius: 5%;
 	background-color: rgb(47, 48, 54);
+}
+
+.marker-selector:hover{
+	transform: scale(1.1);
 }
 
 #indicators{
