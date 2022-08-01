@@ -139,6 +139,17 @@ const displayController = (() =>{
         area.removeEventListener('click', move);
     } 
 
+    const selectIndicator = () => {
+        const circle = document.getElementById('o');
+        const cross = document.getElementById('x');
+        circle.addEventListener('click', () =>{
+            selectedIndicator = 'o';
+        });
+        cross.addEventListener('click', () =>{
+            selectedIndicator = 'x';
+        })
+    }
+
     const creationMenuToggle = () =>{
         const create = document.getElementById('create-button');
         const createMenu = document.getElementById('character-create');
