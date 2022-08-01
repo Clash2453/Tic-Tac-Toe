@@ -66,12 +66,20 @@ const gameBoard = (() =>{
                     boardState();
 
                     displayController.updateMove(index, player1.indicator);
-                    displayController.updateMove(aiMove(), ai.indicator);
-
-                    winCon([[board[0][0], board[1][1], board[2][2]], [board[0][2], board[1][1], board[2][0]]]);
-            
                     winCon(transposeMatrix(board));
                     winCon(board);
+
+                    if(winCon(board) || winCon(transposeMatrix(board)) || checkDraw()){
+                        return;
+                    }
+
+                    displayController.updateMove(aiMove(), ai.indicator);
+
+                    if(winCon(board) || winCon(transposeMatrix(board)) || checkDraw()){
+                        return;
+                    }
+                    winCon([[board[0][0], board[1][1], board[2][2]], [board[0][2], board[1][1], board[2][0]]]);
+            
 
                     console.log('here I am');
                     return;
@@ -99,11 +107,13 @@ const gameBoard = (() =>{
             if(row.every(value => value === player1.indicator)){
                 console.log('Player won');
                 resetBoard();
+                return true;
             }
 
             if(row.every(value => value === ai.indicator)){
                 console.log('AI won');
                 resetBoard();
+                return true;
             }
 
         })
