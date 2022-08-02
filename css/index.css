@@ -283,6 +283,18 @@ h2{
 	padding: 0 2rem;
 }
 
+.score-title{
+	color: white;
+	text-align: center;
+	font-family: 'reef', sans-serif;
+	font-size: 2rem;
+}
+
+.score-icon{
+	width: 50px;
+	height: 50px;
+}
+
 .marker{
 	width: 150px;
 	height: 150px;
