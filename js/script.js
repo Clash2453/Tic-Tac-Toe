@@ -196,6 +196,49 @@ const displayController = (() =>{
         })
     }
         
+    //Never doubt that you are the one and can have your dreams
+
+    const addScore = (status) => {
+        const board = document.getElementById('score-board');
+        const card = document.createElement('div');
+        const icon = document.createElement('img');
+        const title = document.createElement('h2');
+
+        card.classList.add('score');
+
+        icon.classList.add('score-icon');
+
+        title.classList.add('score-title');
+
+
+        card.appendChild(icon);
+        card.appendChild(title);
+
+        if(status === 'win'){
+            icon.src = '../images/swords.png';
+            icon.alt = 'sword';
+            
+            title.textContent = 'You Win!';
+            card.classList.add('win');
+        }
+
+        if(status === 'loss'){
+            icon.src = '../images/skull.png';
+            icon.alt = 'skull';
+
+            title.textContent = 'You lose...';
+            card.classList.add('loss');
+        }
+
+        if(status === 'draw'){
+            icon.src = '../images/shield.png';
+            icon.alt = 'shield';
+            title.textContent = "It's a draw";
+            card.classList.add('draw');
+        }
+        board.appendChild(card);
+    }
+
     creationMenuToggle();
     selectIndicator();
     addEvent();
