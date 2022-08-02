@@ -105,18 +105,21 @@ const gameBoard = (() =>{
 
         arr.forEach(row => {
             if(row.every(value => value === player1.indicator)){
+                displayController.addScore('win');
                 console.log('Player won');
                 resetBoard();
                 return true;
             }
 
             if(row.every(value => value === ai.indicator)){
+                displayController.addScore('loss');
                 console.log('AI won');
                 resetBoard();
                 return true;
             }
 
         })
+        
     }
     return {
         boardState,
@@ -246,6 +249,7 @@ const displayController = (() =>{
         updateMove,
         addEvent,
         resetBoard,
+        addScore
     }
 
 })();
