@@ -267,14 +267,15 @@ h2{
 }
 
 #score-heading{
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	color: black;
+	box-shadow: rgba(53, 202, 126, 0.35) 0px 5px 15px;
+	color: white;
 	text-align: center;
-	width: 33vw;
+	width: 28vw;
+	
 }
 
 .score{
-	width: 30vw;
+	width: 25vw;
 	height: 75px;
 	margin: 10px 5px;
 	display: flex;
