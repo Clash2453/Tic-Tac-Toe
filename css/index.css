@@ -295,6 +295,23 @@ h2{
 	height: 50px;
 }
 
+.win{
+	box-shadow: rgba(53, 202, 126, 0.35) 0px 5px 15px;
+	background-color: rgba(53, 202, 126, 0.9);
+}
+
+.loss{
+	box-shadow: rgba(253, 2, 85, 0.35) 0px 5px 15px;
+	background-color: rgba(253, 2, 85, 0.9);
+	color: rgb();
+
+}
+
+.draw{
+	box-shadow: rgb(239, 121, 16, 0.35) 0px 5px 15px;
+	background-color: rgb(239, 121, 16, 0.9);
+}
+
 .marker{
 	width: 150px;
 	height: 150px;
