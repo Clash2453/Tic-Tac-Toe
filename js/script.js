@@ -66,20 +66,19 @@ const gameBoard = (() =>{
                     boardState();
 
                     displayController.updateMove(index, player1.indicator);
-                    winCon(transposeMatrix(board));
+
+                    winCon(board) 
+                    winCon(transposeMatrix(board))
+                    winCon([[board[0][0], board[1][1], board[2][2]], [board[0][2], board[1][1], board[2][0]]])
+
+                    checkDraw()
+                    displayController.updateMove(aiMove(), ai.indicator);
                     winCon(board);
 
-                    if(winCon(board) || winCon(transposeMatrix(board)) || checkDraw()){
-                        return;
-                    }
+                    winCon(transposeMatrix(board));
+                    winCon([[board[0][0], board[1][1], board[2][2]], [board[0][2], board[1][1], board[2][0]]])
 
-                    displayController.updateMove(aiMove(), ai.indicator);
-
-                    if(winCon(board) || winCon(transposeMatrix(board)) || checkDraw()){
-                        return;
-                    }
-                    winCon([[board[0][0], board[1][1], board[2][2]], [board[0][2], board[1][1], board[2][0]]]);
-            
+                    checkDraw()
 
                     console.log('here I am');
                     return;
@@ -95,6 +94,7 @@ const gameBoard = (() =>{
         board.forEach(row => row.forEach(e => {if(!isNaN(e)){draw = false}}))
 
         if(draw === true){
+            displayController.addScore('draw');
             console.log('It is a draw');
             resetBoard();
             return true;
