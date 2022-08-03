@@ -334,3 +334,21 @@ h2{
 .hidden{
 	display: none;
 }
+
+@media only screen and (max-width: 950px) {
+	#main-section{
+		grid-template-rows: 0.2fr 0.5fr 0.14fr 0.1fr;
+		grid-template-areas: 
+		'heading heading heading'
+		'board board board'
+		'scores scores scores'
+		'scores scores scores';
+	}
+	#game-board{
+		grid-template-columns: 30vw 30vw 30vw;
+		grid-template-rows: 30vw 30vw 30vw;
+	}
+	.score{
+		width: 75%;
+	}
+}
